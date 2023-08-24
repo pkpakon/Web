@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+    font-weight: 600;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    /*background: url('photo/4k.jpg'); /* แทนชื่อไฟล์รูปภาพ.นามสกุล ด้วย URL ของรูปภาพที่คุณต้องการใช้ */
+    background: #000000;
+    background-size: cover; /* ปรับขนาดรูปภาพให้ครอบคลุมพื้นที่พื้นหลัง */
+    background-repeat: no-repeat; /* ไม่เปิดใช้การทำซ้ำรูปภาพในพื้นหลัง */
+    color: rgb(67, 0, 0);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px; /* เปลี่ยน 600px เป็น 60px เพื่อให้เหมาะสมกับหน้าจอขนาดเล็กขึ้น */
+    width: 100%;
+    height: 100px;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 2rem;
+    background: -webkit-linear-gradient(120deg, hsl(318, 94%, 61%), hsl(239, 69%, 51%));
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+ul {
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 20px;
+    font-size: 1.2rem;
+}
+
+nav a {
+    background: -webkit-linear-gradient(120deg, hsl(318, 94%, 61%), hsl(239, 69%, 51%));
+    background-clip:text;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    /*padding: 5px 15px; /* เพิ่ม padding เพื่อให้ navigation link มีพื้นที่ตัวหนังสือมากขึ้น */
+    /*border-radius: 5px; /* เพิ่ม border-radius เพื่อทำเส้นขอบของ navigation link เป็นวงกลม */
+    transition: background-color 0.3s; /* เพิ่ม transition เพื่อให้สี background ของ navigation link เปลี่ยนสีเมื่อ hover */
+}
+
+nav a:hover {
+    background-color: hsl(240, 70%, 50%); /* เปลี่ยนสี background เมื่อ hover */
+    /*-webkit-text-fill-color: white; /* เปลี่ยนสีตัวหนังสือเป็นสีขาวเมื่อ hover */
+}
+
+nav a {
+    color: white; /* ตั้งค่าสีตัวอักษรใน navigation link ให้เป็นสีขาว */
+    text-decoration: none; /* ลบขีดเส้นใต้ของ navigation link */
+    padding: 10px 20px; /* เพิ่ม padding ให้ navigation link มีพื้นที่ตัวหนังสือมากขึ้น */
+}
+
+nav a:hover {
+    border-bottom: 2px solid hsl(239, 69%, 51%);
+    transition: border-bottom 1s; /* เพิ่ม transition ให้ border-bottom เปลี่ยนสีอย่างช้าๆ เมื่อ hover */
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /*margin-top: 20px; /* เปลี่ยน 200px เป็น 20px ใน margin-top เพื่อให้เหมาะสมกับหน้าจอขนาดเล็กขึ้น */
+
+}
+
+.content2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: left;
+    margin-left: 50px; /* กำหนดระยะห่างของ .content2 จากขอบซ้ายของหน้าจอ */
+    max-width: 800px; /* กำหนดความกว้างสูงสุดของ .content2 */
+    width: 100%; /* กำหนดให้ .content2 มีความกว้างเท่ากับหน้าจอ */
+}
+p {
+    text-indent: 30px; /* ขยับย่อหน้าทุกบรรทัดใน <p> ไปทางขวา 30px */
+    font-size: 1rem;
+}
+
+body {
+    margin: 0; /* กำหนดให้ไม่มีระยะห่างของ body จากขอบซ้ายของหน้าจอ */
+}
+
+.content img {
+    width: 25rem;
+    /*background: linear-gradient(hsl(318, 94%, 61%), hsl(239, 69%, 51%));*/
+    transform: translateY(0px);
+    animation: float 6s ease-in-out infinite;
+}
+
+.introduction {
+    background: linear-gradient(120deg, hsl(320, 19%, 94%), hsl(231, 4%, 65%));
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2rem; /* ปรับขนาดข้อความ */
+    font-weight: 400;
+    margin-top: 20px;
+    margin-left: 50px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.introduction p {
+    font-size: 1rem; /* ปรับขนาดข้อความย่อย */
+    margin-top: 10px; /* ปรับระยะห่างของข้อความย่อย */
+}
+.profile {
+    display: flex;
+    align-items: center;
+}
+.profile-text {
+    text-align: left;
+}
+/* ส่วน CSS */
+.profile-image {
+    width: 250px; /* ปรับขนาดความกว้างของภาพ */
+    height: 250px; /* ปรับขนาดความสูงของภาพ */
+    border-radius: 50%; /* กำหนดรูปร่างของภาพให้เป็นวงกลม */
+    margin-right: 20px; /* เพิ่มระยะห่างด้านขวาของภาพ */
+    object-fit: cover;
+}
+/* CSS */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#background-video {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
